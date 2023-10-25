@@ -2,33 +2,40 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+Install the required dependencies with npm 
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the home page.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+On the home page you should see files uploaders and the reports generators.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Upload all the necessary files and generate the required reports.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Assignment Questions
 
-## Learn More
+Thank you for giving me the opportunity to complete this assignment. I appreciate that you chose a realistic task instead of the usual algorithm-based tasks given by most companies. Even if we don’t proceed further, I enjoyed working on this assignment and would like to thank everyone involved in making it.
 
-To learn more about Next.js, take a look at the following resources:
+Responses
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Discuss your solution’s time complexity. What tradeoffs did you make?
+I have created a user-friendly full-stack web application using Next.js framework, consisting of an API and file uploader without storing static files within the application. Although a simple script can accomplish the same job, my intention was to create an efficient end-user product with better functionality and performance.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+In the application, the user visits the home page and uploads files for processing. Upon clicking "generate reports," the files are sent to the endpoint for processing. The calculation takes place at runtime, and the outputted CSV is returned as a downloadable file. Regarding time complexity, my application has a worst-case time complexity of O(n). I believe I have made the right tradeoffs, balancing functionality and performance.
 
-## Deploy on Vercel
+2. How would you change your solution to account for future columns that might be requested, such as “Bill Voted On Date” or “Co-Sponsors”?
+If new columns were added to the dataset, I would modify the API to process these columns through a new function or modify the existing one. Additionally, I would add the new column names to the backend functions responsible for rendering the CSV files.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. How would you change your solution if instead of receiving CSVs of data, you were given a list of legislators or bills that you should generate a CSV for?
+In such a scenario, I would use the existing helper function that generates a CSV file from JSON. I would modify the application to accept a list of legislators or bills as input from the user, convert them to JSON format, and utilize the same function to generate the required CSV files.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+4. How long did you spend working on the assignment?
+I spent approximately three hours working on this assignment. The majority of the time was spent creating the file upload functionality while endpoint creation took less than an hour.
